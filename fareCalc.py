@@ -35,14 +35,14 @@ isDragging = False
 
 def LoadGtfsData(): #load gtfs data from gtfs-master folder
     try:
-        if not os.path.exists("gtfs-master"): #check if folder exists
+        if not os.path.exists("gtfs-master (2)"): #check if folder exists
             ShowErrorMessage("GTFS Data Error", 
                              "gtfs-master folder not found. Please ensure the folder exists in the same directory as this script.")
             return None, None, None
         
-        routes = pd.read_csv("gtfs-master/routes.txt") #load necessary gtfs files
-        stops = pd.read_csv("gtfs-master/stops.txt")
-        trips = pd.read_csv("gtfs-master/trips.txt")
+        routes = pd.read_csv("gtfs-master (2)/gtfs-master/routes.txt") #load necessary gtfs files
+        stops = pd.read_csv("gtfs-master (2)/gtfs-master/stops.txt")
+        trips = pd.read_csv("gtfs-master (2)/gtfs-master/trips.txt")
         
         print(f"Loaded {len(routes)} routes, {len(stops)} stops, {len(trips)} trips")
         return routes, stops, trips
